@@ -5,4 +5,7 @@ footer.footer {
     padding: 0 25px;
     background-color: #fff;
     box-shadow: var(--shadow);
+    margin-top: 2rem;
+    height: 5rem;
+    font-size: 2rem;
 }

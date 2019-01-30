@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading-secundary {
+    display: block;
+    transition: all .2s;
+    width: 100%;
+
+    &--min {
+        display: block;
+        font-size: 3rem;
+        margin-left: 1rem;
+    }
+}
+

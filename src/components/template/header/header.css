@@ -1,16 +1,40 @@
-header.header {
-    background: linear-gradient(to right, #1d976c, #93f9b9); 
+.header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(to right, #7448ff, #1f6bff); 
     padding: 0px 15px;
     overflow: hidden;
     white-space: nowrap;
-    box-shadow: var(--shadow);
+    padding: 2rem;
 }
 
-header.header h1 {
+.title-logo{
+    display: inline-block;
     font-size: 1.8em;
-    color: aliceblue;
+    color: white;
+    padding: .5rem;
+    text-align: left;
+    margin-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-header.header p {
-    color: antiquewhite;
+.subtitle-image {
+    color: white;
+}
+
+.header img {
+    display: inline-block;
+}
+
+.title-image {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
 }

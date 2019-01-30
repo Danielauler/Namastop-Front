@@ -1,31 +1,27 @@
 import React, { Component } from 'react'
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
-import logo from '../assets/images/logo.png';
-
-export default class extends Component {
-    render() {
-        const { to, from, text } = this.props;
-        return (
-            <Flippy
-                flipOnHover={false} // default false
-                flipOnClick={true} // default false
-                flipDirection="horizontal" // horizontal or vertical
-                ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-                // if you pass isFlipped prop component will be controlled component.
-                // and other props, which will go to div
-                style={{ width: '200px', height: '300px', padding: 10, }} /// these are optional style, it is not necessary
-            >
-                <FrontSide style={{ backgroundColor: '#43C6AC', padding: 20, justifyContent: 'center' }} >
-                    <p>de <strong>{from}</strong></p>
-                    <span role='img' aria-label='gratitude' style={{paddingLeft: 50}}>🙏</span>
-                    <p style={{ alignItems: 'flex-end' }}>para {'\n'} <strong>{to}</strong></p>
-                </FrontSide>
-                <BackSide
-                    style={{ backgroundColor: '#34e89e' }}>
-                    <p style={{ justifyContent: 'center', alignItems: 'center', padding: 10 }}>{text}</p>
-                </BackSide>
-            </Flippy>
-        )
-    }
+export default class Card extends Component {
+  render() {
+    const { from, to, text } = this.props;
+    return (
+      <div className="card-namastop">
+        <div className="card-namastop__side card-namastop__side--front card-namastop__side--front-1">
+          <div className="card-namastop__box">
+            <span className='heading-secundary' style={{flex:1}}>
+              <span className="heading-secundary--min">De: {from}</span>
+            </span>
+            <i className="card-namastop__box--icon fa fa-heart"></i>
+          </div>
+          <span className='heading-secundary' style={{flex:1}}>
+              <span className="heading-secundary--min u-text-right">para: {to}</span>
+            </span>
+        </div>
+        <div className="card-namastop__side card-namastop__side--back card-namastop__side--back-1">
+          <div className="card-namastop__box">
+            <p className='card-namastop__box--text'>{text}</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }

@@ -1,4 +1,29 @@
-.cards {
+.cards-list .actions {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+
+.cards-list .actions button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #5A2458;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cards-list .actions button[disabled] {
+    opacity: 0.5;
+    cursor: default;
+}    
+
+.cards-list .actions button:hover {
+    opacity: 0.7;
+}
+
+.cards-list .actions button[disabled]:hover {
+    opacity: 0.5;
 }
